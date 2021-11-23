@@ -1,0 +1,13 @@
+<h1>Reactive Form</h1>
+{{id}}
+ <form [formGroup]="music" (ngSubmit)="getMusic()">
+    Enter Music Name:<input type="text"  formControlName="mName"
+    ><br>
+    <span class="text-danger alert-danger"
+    *ngIf="(musicControl.mName.touched || submitted) && musicControl.mName.errors?.required">
+    Name is required
+</span><br>
+    Enter Singer Name:<input type="text" formControlName="singer"
+   ><br>
+    <input type="submit" value="Enter">
+</form>

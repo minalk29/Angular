@@ -1,0 +1,16 @@
+
+<h1>Template Driven Form</h1>
+<form (submit)="getMusic()" >
+    Enter Music Name:<input type="text" name="mName"
+    [(ngModel)]="musiclist.mName" id="mName" required #mName="ngModel"><br>
+
+    <div [hidden]="mName.valid || mName.pristine"
+     class="alert alert-danger">
+    Music Name is Required</div>
+
+    Enter Singer Name:<input type="text" name="singer"
+    [(ngModel)]="musiclist.singer" id="singer"><br>
+    <input type="submit" value="Enter">
+
+    
+</form>

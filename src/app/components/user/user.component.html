@@ -1,0 +1,11 @@
+<p>user works!</p>
+<table class="table table-stripped">
+    <tr *ngFor="let u of users.data">
+        <td>{{u.id}}</td>
+        <td>{{u.email}}</td>
+<td>{{u.first_name}}</td>
+<td>{{u.last_name}}</td>
+<td><img [src]="u.avatar" height="100px" width="100px"></td>
+    </tr>
+</table>
+<button (click)="click()">add User</button>
